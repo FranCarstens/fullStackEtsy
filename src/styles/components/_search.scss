@@ -1,0 +1,24 @@
+// SEARCH INPUT
+
+header #search-container {
+	position: relative;	
+}
+#search {
+	width: 100%;
+	border-radius: 1.25rem;
+}
+#search_submit {
+	width: 3rem;
+	height: 2.5rem;
+	border-radius: 0 1.25rem 1.25rem 0;
+	position: absolute;
+	top: 0;
+	right: 0;overflow: hidden;
+	border: none;
+	background-color: $orange;
+	color: #FFF;
+}
+#search_submit:hover {
+	background-color: #D26700;
+	cursor: pointer;
+}

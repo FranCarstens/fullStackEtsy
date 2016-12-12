@@ -1,0 +1,141 @@
+a.view_listing {
+	display: block;
+}
+
+.product {
+	font-size: 1rem;
+	display: inline-block;
+	width: 90%;
+	padding-bottom: 100%;
+	height: 0;
+	vertical-align: top;
+	margin: 5%;
+	position: relative;
+	border:  1px solid #EEE;
+	background-color: #FFF;
+	overflow: hidden;
+	cursor: pointer;
+	outline: 5px solid rgba(210, 103, 0, 0);
+	.product_image {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		width: 100%;
+		height: 0;
+		padding-bottom: 125%;
+		transition: all .4s ease-in-out;
+	}
+	.price {
+		float:right;
+		font-family: $title;
+		color: $text;
+	}
+}
+
+
+
+/*details hidden*/
+.details {
+	width: 100%;
+	background: rgba(255,255,255,1);
+	position: absolute;
+	height:0;
+	padding: 1.5rem 2rem 1rem 2rem;
+	bottom: -1rem;
+	left: 0;
+	overflow: hidden;
+	opacity: 0;
+	transition: all .4s ease;
+	h3, .details p {
+		opacity: 0;
+		transition: all .1s ease;
+	}
+	p {
+		text-transform: capitalize;
+		opacity: 0;
+		transition: all .1s ease;
+	}
+}
+
+/*details visible*/
+
+.product:hover {
+	outline: 5px solid rgba(210, 103, 0, 1);
+	transition: all .4s ease-in-out;
+	.product_image {
+		transform: scale(1.1) rotate(3deg);
+		transition: all .2s ease-in-out;
+	}
+	.details {
+		height: auto;
+		bottom:0;
+		transition: all .4s ease-in-out;
+		opacity: 1;
+		background: rgba(255,255,255,.95);
+		h3, p {
+			opacity: 1;
+		}
+		h3 {
+			transition: all .3s ease .4s;
+		}
+		p {
+			transition: all .3s ease .5s;
+		}
+	}
+}
+
+
+// @MEDIA
+
+@media #{$tablet} {
+		
+}
+
+@media #{$narrow} {
+	h1 {
+		float:left;
+	}
+	header {
+		text-align: left;
+	}
+	header #search-container {
+		float: right;
+		width: 16rem;
+		position: relative;
+	}
+	#content.gallery-view {
+		padding: 2rem .5rem;
+	}
+	.product {
+		width: 48%;
+		margin: 1%;
+		padding-bottom: 59.5%;
+	}
+}
+
+@media #{$normal} {
+	header #search-container {
+		
+	}
+	#content.gallery-view {
+		padding: 2rem 1rem;
+	}
+	.product {
+		width: 31.3%;
+		margin: 1%;
+		padding-bottom: 38.5%;
+	}
+}
+@media #{$wide} {
+	header #search-container {
+
+	}
+	#content.gallery-view {
+		padding: 2rem 2rem;
+	}
+	.product {
+		width: 23%;
+		margin: 1%;
+		padding-bottom: 27.5%;
+	}
+}
