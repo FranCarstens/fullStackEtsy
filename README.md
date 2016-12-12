@@ -8,6 +8,11 @@ Betsy started as a weekend project for *The Iron Yard*. Styling for this project
 
 **Live preview:** https://betsyforetsy.herokuapp.com/
 
+##Todo
+
+* Include Search functionality.
+* Improve and complete styling.
+
 ##Credits
 
 * Built on: Maestro by [Justin Richards](https://github.com/magentanova/maestro).
